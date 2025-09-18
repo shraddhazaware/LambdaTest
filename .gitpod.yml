@@ -1,0 +1,13 @@
+image: mcr.microsoft.com/dotnet/sdk:7.0
+
+tasks:
+  - name: Restore, Build, and Test
+    init: dotnet restore
+    command: |
+      dotnet build
+      dotnet test
+
+vscode:
+  extensions:
+    - ms-dotnettools.csharp
+    - formulahendry.dotnet-test-explorer
